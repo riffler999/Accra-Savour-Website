@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart | Accra Savour</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-wrap">
+      <a href="index.html" class="logo">Accra<span style="background:var(--terracotta);color:#fff;padding:0.15rem 0.45rem;border-radius:3px;font-weight:700">Savour</span></a>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="cart.html" style="color:var(--terracotta)">Cart</a>
+        <a href="#" data-open-modal>Reserve a Table</a>
+      </nav>
+      <div class="header-actions">
+        <a href="cart.html" class="cart-btn" aria-label="Shopping cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.6 12H2"></path><path d="M17 12v8a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-8"></path></svg>
+          <span class="cart-badge">0</span>
+        </a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu"><div class="line"></div></button>
+      </div>
+    </div>
+  </header>
+  <section class="cart-hero">
+    <div class="container">
+      <h1>Your Cart</h1>
+      <p>Review your order before checkout.</p>
+    </div>
+  </section>
+  <div class="container cart-container">
+    <div class="cart-items" id="cart-items"></div>
+    <aside class="cart-sidebar">
+      <h2>Order Summary</h2>
+      <div id="cart-empty-state" style="display:none;">
+        <p style="font-size:0.9rem;color:var(--muted);margin-bottom:1rem;">Your cart is empty.</p>
+      </div>
+      <div id="cart-sidebar-items"></div>
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <span id="cart-total">₵ 0.00</span>
+      </div>
+      <div class="cart-summary-row total">
+        <span>Total</span>
+        <span id="cart-total-final">₵ 0.00</span>
+      </div>
+      <div class="cart-footer">
+        <button class="btn btn--primary btn--full" id="checkout-btn">Proceed to Checkout</button>
+      </div>
+    </aside>
+  </div>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Accra<span style="background:var(--terracotta);color:#fff;padding:0.15rem 0.45rem;border-radius:3px;font-weight:700">Savour</span></a>
+          <p>Authentic Ghanaian cuisine delivered hot to your doorstep in Accra and beyond.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="#" data-open-modal>Reserve a Table</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>East Legon, Accra, Ghana</li>
+            <li>orders@accrasavour.com</li>
+            <li>+233 50 123 4567</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hours</h4>
+          <ul>
+            <li>Mon – Thu: 11:00 AM – 10:00 PM</li>
+            <li>Fri – Sat: 11:00 AM – 11:00 PM</li>
+            <li>Sunday: 12:00 PM – 9:00 PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Accra Savour. Built for Information Systems class project.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Reservation modal -->
+  <div class="modal-overlay" id="reservation-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Reserve a Table</h3>
+        <button class="modal-close" id="modal-close" aria-label="Close">×</button>
+      </div>
+      <div class="modal-body">
+        <form id="reservation-form">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" name="res-name" required placeholder="Ama Mensah">
+            <span class="error-msg">Please enter your name</span>
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" name="res-phone" required placeholder="+233 50 123 4567">
+            <span class="error-msg">Please enter your phone number</span>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="res-email" placeholder="ama@example.com">
+          </div>
+          <div class="form-group">
+            <label>Date</label>
+            <input type="date" name="res-date" required>
+            <span class="error-msg">Please select a date</span>
+          </div>
+          <div class="form-group">
+            <label>Time</label>
+            <input type="time" name="res-time" required>
+            <span class="error-msg">Please select a time</span>
+          </div>
+          <div class="form-group">
+            <label>Number of Guests</label>
+            <select name="res-guests" required>
+              <option value="">Select guests</option>
+              <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option>
+            </select>
+            <span class="error-msg">Please select number of guests</span>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn--primary btn--full" form="reservation-form">Reserve Table</button>
+      </div>
+      <div class="reservation-success" id="reservation-success">
+        <div class="check">✓</div>
+        <h3>Reservation Confirmed</h3>
+        <p>We’ve received your booking. We’ll confirm via SMS shortly.</p>
+        <button class="btn btn--outline btn--full" id="modal-close-done">Done</button>
+      </div>
+    </div>
+  </div>
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <div class="mobile-drawer" id="mobile-drawer">
+    <button class="drawer-close" id="drawer-close" aria-label="Close menu">×</button>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="cart.html">Cart</a>
+    <a href="#" data-open-modal>Reserve a Table</a>
+    <div class="drawer-footer">
+      <div class="drawer-cart">
+        <span>Cart Total</span>
+        <span class="total" id="drawer-total">₵ 0.00</span>
+      </div>
+      <a href="cart.html" class="btn btn--primary btn--full" style="margin-top:1rem">View Cart</a>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
