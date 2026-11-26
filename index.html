@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accra Savour | Authentic Ghanaian Cuisine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-wrap">
+      <a href="index.html" class="logo">Accra<span style="background:var(--terracotta);color:#fff;padding:0.15rem 0.45rem;border-radius:3px;font-weight:700">Savour</span></a>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="cart.html">Cart</a>
+        <a href="#" data-open-modal>Reserve a Table</a>
+      </nav>
+      <div class="header-actions">
+        <a href="cart.html" class="cart-btn" aria-label="Shopping cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="4" cy="18" r="3"></circle>
+            <circle cx="20" cy="18" r="3"></circle>
+            <path d="M2 6h20"></path>
+            <path d="M6 10l4 4l-2 8l4-4Z"></path>
+          </svg>
+          <span class="cart-badge">0</span>
+        </a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu"><div class="line"></div></button>
+      </div>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="hero-badge">Now Serving · East Legon, Accra</span>
+        <h1>Authentic flavours,<br>served with warmth.</h1>
+        <p>From steaming jollof to crispy kelewele and rich groundnut soup — taste the best of Ghanaian hospitality, online.</p>
+        <div class="hero-actions">
+          <a href="menu.html" class="btn btn--primary">View Menu</a>
+          <a href="#" class="btn btn--outline" data-open-modal>Reserve a Table</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://placehold.co/700x600?text=Jollof+Rice+Platter&bg=F7F4EF&fg=B85042" alt="Jollof rice platter">
+      </div>
+    </div>
+  </section>
+  <section class="featured">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-kicker">Featured</span>
+        <h2 class="section-title">Today’s Favourites</h2>
+        <p class="section-desc">Our most-loved dishes, ready for delivery or pickup across Accra.</p>
+      </div>
+      <div class="featured-grid" id="featured-grid"></div>
+    </div>
+  </section>
+  <section class="cta-strip">
+    <div class="container cta-grid">
+      <div class="cta-content">
+        <h2>Craving something?</h2>
+        <p>Order online and we’ll bring it to your doorstep, hot and fresh.</p>
+        <a href="menu.html" class="btn btn--outline btn--full">Order Now</a>
+      </div>
+      <div class="cta-image">
+        <img src="https://placehold.co/500x400?text=Banku+%26+Tilapia&bg=1C1B19&fg=F7F4EF" alt="Banku and grilled tilapia">
+      </div>
+    </div>
+  </section>
+  <section class="about">
+    <div class="container about-grid">
+      <div class="about-text">
+        <h2>Made in Accra,<br>served with love.</h2>
+        <p>Accra Savour brings together the recipes we grew up with — smoky waakye, tangy shito, juicy chinchinga — prepared fresh daily and delivered straight to you.</p>
+        <div class="about-stats">
+          <div><div class="stat-number">10+</div><div class="stat-label">Years of flavour</div></div>
+          <div><div class="stat-number">500k+</div><div class="stat-label">Meals served</div></div>
+          <div><div class="stat-number">4.9</div><div class="stat-label">Customer rating</div></div>
+        </div>
+      </div>
+      <div class="about-image">
+        <img src="https://placehold.co/700x600?text=Kitchen+Team&bg=F7F4EF&fg=B85042" alt="Kitchen team">
+      </div>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Accra<span style="background:var(--terracotta);color:#fff;padding:0.15rem 0.45rem;border-radius:3px;font-weight:700">Savour</span></a>
+          <p>Authentic Ghanaian cuisine delivered hot to your doorstep in Accra and beyond.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="#" data-open-modal>Reserve a Table</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>East Legon, Accra, Ghana</li>
+            <li>orders@accrasavour.com</li>
+            <li>+233 50 123 4567</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hours</h4>
+          <ul>
+            <li>Mon – Thu: 11:00 AM – 10:00 PM</li>
+            <li>Fri – Sat: 11:00 AM – 11:00 PM</li>
+            <li>Sunday: 12:00 PM – 9:00 PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Accra Savour. Built for Information Systems class project.</p>
+        <p style="font-size:0.75rem;opacity:0.5">Paystack integration in test mode — for testing only.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Reservation modal -->
+  <div class="modal-overlay" id="reservation-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Reserve a Table</h3>
+        <button class="modal-close" id="modal-close" aria-label="Close">×</button>
+      </div>
+      <div class="modal-body">
+        <form id="reservation-form">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" name="res-name" required placeholder="Ama Mensah">
+            <span class="error-msg" id="res-name-error">Please enter your name</span>
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" name="res-phone" required placeholder="+233 50 123 4567">
+            <span class="error-msg" id="res-phone-error">Please enter your phone number</span>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="res-email" placeholder="ama@example.com">
+          </div>
+          <div class="form-group">
+            <label>Date</label>
+            <input type="date" name="res-date" required>
+            <span class="error-msg">Please select a date</span>
+          </div>
+          <div class="form-group">
+            <label>Time</label>
+            <input type="time" name="res-time" required>
+            <span class="error-msg">Please select a time</span>
+          </div>
+          <div class="form-group">
+            <label>Number of Guests</label>
+            <select name="res-guests" required>
+              <option value="">Select guests</option>
+              <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option>
+            </select>
+            <span class="error-msg">Please select number of guests</span>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn--primary btn--full" form="reservation-form">Reserve Table</button>
+      </div>
+      <div class="reservation-success" id="reservation-success">
+        <div class="check">✓</div>
+        <h3>Reservation Confirmed</h3>
+        <p>We’ve received your booking. We’ll confirm via SMS shortly.</p>
+        <button class="btn btn--outline btn--full" id="modal-close-done">Done</button>
+      </div>
+    </div>
+  </div>
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <div class="mobile-drawer" id="mobile-drawer">
+    <button class="drawer-close" id="drawer-close" aria-label="Close menu">×</button>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="cart.html">Cart</a>
+    <a href="#" data-open-modal>Reserve a Table</a>
+    <div class="drawer-footer">
+      <div class="drawer-cart">
+        <span>Cart Total</span>
+        <span class="total" id="drawer-total">₵ 0.00</span>
+      </div>
+      <a href="cart.html" class="btn btn--primary btn--full" style="margin-top:1rem">View Cart</a>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
